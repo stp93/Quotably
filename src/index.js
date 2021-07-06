@@ -43,8 +43,8 @@ const resolvers = require('./resolvers');
 
 
 const app = express();
-//app.use(helmet());
 app.use(cors());
+//app.use(helmet());
 db.connect(DB_HOST)
 
 const depthLimit = require('graphql-depth-limit');
