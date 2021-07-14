@@ -20,7 +20,7 @@ type User {
 }
 type Query{
     quotes: [Quote!]!
-    quote(id: ID!): Quote!
+    quote(id: ID): Quote!
     quoteFeed(cursor: String): QuoteFeed
     user(username:String!): User
     users: [User!]!
@@ -31,7 +31,7 @@ type Mutation {
     updateQuote(id: ID!, content: String!): Quote!
     deleteQuote(id: ID!): Boolean!
     signUp(username: String!, email: String!, password: String!): String!
-    signIn(username: String!, email: String!, password: String!): String!
+    signIn(username: String, email: String, password: String!): String!
     toggleFavorites(id: ID!): Quote!
 }
 scalar DateTime

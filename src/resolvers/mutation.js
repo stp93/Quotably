@@ -80,11 +80,13 @@ module.exports = {
         });
         if(!user){
             throw new AuthenticationError('Error signing in');
+            
         }
 
         const valid = await bcrypt.compare(password,user.password);
         if(!valid){
             throw new AuthenticationError('Error Signing In');
+            
         }
         return jwt.sign({id: user._id}, process.env.JWT_SECRET);
     },

@@ -14,7 +14,7 @@ module.exports = {
         let cursorQuery = {};
 
         if (cursor) {
-            cursorQuery = {_id: { $lt: cursor }};
+            cursorQuery = { _id: { $lt: cursor }};
         }
 
         let quotes = await
